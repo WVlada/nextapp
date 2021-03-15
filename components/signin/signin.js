@@ -4,12 +4,13 @@ import { Button, ButtonGroup } from "@chakra-ui/react"
 
 export default function SignIn({ providers }) {
   return (
-    <>
+    <div>
+      <h1>Doborodosli</h1>
       {Object.values(providers).map(provider => (
         <div key={provider.name}>
           <Button colorScheme="teal" onClick={() => signIn(provider.id, { callbackUrl: 'http://localhost:3000/' })}>Sign in with {provider.name}</Button>
         </div>
       ))}
-    </>
+    </div>
   )
 }
